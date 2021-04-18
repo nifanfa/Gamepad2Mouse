@@ -15,6 +15,7 @@ namespace ConsoleApp2
         private const int ScrollDivider = 10_000;
         private Controller controller;
         private IMouseSimulator mouseSimulator;
+
         private Timer timer;
 
         private bool wasADown;
