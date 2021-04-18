@@ -11,8 +11,8 @@ namespace ConsoleApp2
 {
     class Gamepad2Mouse
     {
-        private const int MomentDivider = 2_000;
-        private const int ScrollDivider = 10_000;
+        private const int MomentDivider = 2500;
+        private const int ScrollDivider = 5000;
         private Controller controller;
         private IMouseSimulator mouseSimulator;
 
@@ -20,7 +20,7 @@ namespace ConsoleApp2
 
         private bool wasADown;
         private bool wasBDown;
-        private int RefreshRate = 60;
+        private int RefreshRate = 120;
 
         public Gamepad2Mouse()
         {
@@ -37,6 +37,7 @@ namespace ConsoleApp2
         private void Update()
         {
             controller.GetState(out var state);
+
             Movement(state);
             Scroll(state);
             LeftButton(state);
